@@ -1,0 +1,27 @@
+<project name="xslt-trainee" basedir="." default="build">
+
+    <property name="input.dir" value="input"/>
+    <property name="output.dir" value="output"/>
+    <property name="saxon.jar" value="./lib/saxon-he-10.3.jar"/>
+
+    <property name="html.xsl" value="./xsl/test_problem.xsl"/>
+
+    <target name="run" description="run transformation">
+        <java jar="${saxon.jar}" fork="true">
+            <arg value="-o:./${output.dir}/result.html"/>
+            <arg value="${input.dir}/XSLT_Trainee_Test_Problem.xml"/>
+            <arg value="${html.xsl}"/>
+        </java>
+    </target>
+
+   <target name="build" depends="clean, init, run" description="prepare and run transformation"/>
+
+    <target name="init" description="init">
+        <mkdir dir="${output.dir}"/>
+    </target>
+
+    <target name="clean" description="clean up build files">
+        <delete dir="${output.dir}"/>
+    </target>
+
+</project>

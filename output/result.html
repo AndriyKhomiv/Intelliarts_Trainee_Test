@@ -1,0 +1,1036 @@
+<!DOCTYPE HTML><html>
+   <body>
+      
+      <h1 class="title">XSLT Trainee Test Problem</h1>
+      
+      
+      <div class="section">
+         <h1>Introduction</h1>
+         
+         
+         <p class="para">This document is intended for all people who would like to obtain an
+            XSLT Trainee/Developer position at Intelliarts company. The document
+            contains a test problem for applicants, a short introduction into DocBook
+            and many links to resources where you can learn more about technologies
+            you are supposed to work with: XML, XSLT, HTML, XPath, XQuery and so on.
+            </p>
+         
+         
+         <p class="para">The test problem contains a few levels. We assume that one week
+            should be enough to learn all required technologies and develop a solution
+            for the test problem. In case you complete this work faster then you can
+            implement solutions for optional and bonus tasks. The more levels you
+            complete, the better your chances are.
+            </p>
+         </div>
+      
+      
+      <div class="section">
+         <h1>Problem description</h1>
+         
+         
+         <p class="para">The final goal of the test problem is to create an XSLT
+            transformation which converts an XML document into HTML document. With the
+            test problem description you get the source of this document in the XML
+            format, or strictly speaking in DocBook, which is semantic markup language
+            for technical documentation.
+            </p>
+         
+         
+         <p class="para">Chapters below contain a brief description of several DocBook
+            elements (or group of elements) and a few examples, thus you can easily
+            use this document to test your transformation.
+            </p>
+         </div>
+      
+      
+      <div class="section">
+         <h1>DocBook elements catalog</h1>
+         
+         
+         <p class="para">This chapter contains descriptions of the most commonly used DocBook
+            elements with samples. We don't consider structural elements like
+            <code class="code">book</code>, <code class="code">article</code> or <code class="code">chapter</code>, since for
+            the test problem we chose only the <code class="code">article</code> element.
+            </p>
+         
+         
+         <div class="section">
+            <h2>Block-level elements</h2>
+            
+            
+            <p class="para">Block-level elements in DocBook are elements like paragraphs,
+               lists, and so forth. In the result HTML document they are usually
+               represented with block-level elements. Next chapters briefly describe
+               some of the block-level elements and provide ideas about how they can be
+               rendered.
+               </p>
+            
+            
+            <div class="section">
+               <h3>Paragraph element</h3>
+               
+               
+               
+               <p class="para">Element name: <code class="code">para</code>.
+                  </p>
+               
+               
+               <p class="para">Description: the <code class="code">para</code> element represents a
+                  paragraph in the document. Usually this element is rendered as a block
+                  with padding before and after it.
+                  </p>
+               
+               
+               <p class="para">Example:</p>
+               
+               
+               <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+               </div>
+            
+            
+            <div class="section">
+               <h3>Ordered list element</h3>
+               
+               
+               
+               <p class="para">Element name: <code class="code">orderedlist</code>.
+                  </p>
+               
+               
+               <p class="para">Description: ordered list is a list of items where each list
+                  item is marked with a number. Ordered lists can be used for describing
+                  a procedure which contains a number of steps. Ordered list is marked
+                  with <code class="code">orderedlist</code> element. Every list item in the list is
+                  represented by the <code class="code">listitem</code> element. Content of each list
+                  item is wrapped by a <code class="code">para</code> element. Besides, the <code class="code">orderedlist</code>
+                  element may also contain an optional <code class="code">para</code> element in the beginning to describe
+                  the content of the list.
+                  </p>
+               
+               
+               <p class="para">Examples.</p>
+               
+               
+               <p class="para">The following list is a simple ordered list with four items. By
+                  default Arabic numbers are used to mark list items.
+                  </p>
+               
+               
+               <ol class="orderedlist">
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                     </li>
+                  </ol>
+               
+               
+               <p class="para">The next list has a specific list intro element and 3 steps.
+                  List intro is a block level element (similar to paragraph) and should
+                  be appropriately indented (user should see that description
+                  corresponds to the list).
+                  </p>
+               
+               
+               <ol class="orderedlist">
+                  
+                  <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                     do eiusmod tempor incididunt ut labore et dolore magna
+                     aliqua.
+                     </p>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                     </li>
+                  </ol>
+               
+               
+               <p class="para">List elements can contain different block/inline level elements.
+                  The following list has several different elements inside every item.
+                  Such example of content shouldn't be a problem if your transformation
+                  is flexible and expandable.
+                  </p>
+               
+               
+               <ol class="orderedlist">
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Lorem ipsum dolor sit amet, <b class="keycap">consectetur adipisicing
+                           elit</b>, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                     
+                     
+                     <p class="para">Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                     
+                     
+                     <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        </p>
+                     
+                     
+                     <ul class="itemizedlist">
+                        
+                        <li class="listitem">
+                           
+                           <p class="para">Ut enim ad minim veniam, quis nostrud exercitation
+                              ullamco laboris nisi ut aliquip ex ea commodo
+                              consequat.
+                              </p>
+                           </li>
+                        
+                        
+                        <li class="listitem">
+                           
+                           <p class="para">Duis aute irure dolor in reprehenderit in voluptate
+                              velit esse cillum dolore eu fugiat nulla pariatur.
+                              </p>
+                           </li>
+                        </ul>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                     </li>
+                  </ol>
+               </div>
+            
+            
+            <div class="section">
+               <h3>Unordered list element</h3>
+               
+               
+               
+               <p class="para">Element name: <code class="code">itemizedlist</code>.
+                  </p>
+               
+               
+               <p class="para">Description: the <code class="code">itemizedlist</code> element is used to
+                  add a simple unordered list to the document. Each list item is
+                  represented by a single <code class="code">listitem</code> element. All list item
+                  content is wrapped by a single <code class="code">para</code> element. Also a list
+                  may contain an optional para element at the beginning to describe
+                  contents of the list.
+                  </p>
+               
+               
+               <p class="para">Formatting: the list should be rendered as a simple bulleted
+                  list. When a list intro element is available it should be properly
+                  indented to let user see that it is a part of the list.
+                  </p>
+               
+               
+               <p class="para">Examples:</p>
+               
+               
+               <p class="para">Simple unordered list that contains four items:</p>
+               
+               
+               <ul class="itemizedlist">
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                     </li>
+                  </ul>
+               
+               
+               <p class="para">Unordered list with a list intro and three list items:</p>
+               
+               
+               <ul class="itemizedlist">
+                  
+                  <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                     do eiusmod tempor incididunt ut labore et dolore magna
+                     aliqua.
+                     </p>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                     </li>
+                  
+                  
+                  <li class="listitem">
+                     
+                     <p class="para">Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                     </li>
+                  </ul>
+               
+               
+               <p class="para">More complex unordered list where list items contain different
+                  elements (including nested unordered list):
+                  </p>
+               
+               
+               <p class="para">
+                  
+                  <ul class="itemizedlist">
+                     
+                     <li class="listitem">
+                        
+                        <p class="para">Lorem ipsum dolor sit amet, <b class="keycap">consectetur
+                              adipisicing elit</b>, sed do eiusmod tempor incididunt ut
+                           labore et dolore magna aliqua.
+                           </p>
+                        </li>
+                     
+                     
+                     <li class="listitem">
+                        
+                        <p class="para">Ut enim ad minim veniam, quis nostrud exercitation
+                           ullamcolaboris nisi ut aliquip ex ea commodo consequat.
+                           </p>
+                        
+                        
+                        <p class="para">Duis aute irure dolor in reprehenderit in voluptate velit
+                           esse cillum dolore eu fugiat nulla pariatur.
+                           </p>
+                        </li>
+                     
+                     
+                     <li class="listitem">
+                        
+                        <p class="para">Excepteur sint occaecat cupidatat non proident, sunt in
+                           culpa qui officia deserunt mollit anim id est laborum.
+                           </p>
+                        
+                        
+                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                           sed do eiusmod tempor incididunt ut labore et dolore magna
+                           aliqua.
+                           </p>
+                        
+                        
+                        <ul class="itemizedlist">
+                           
+                           <li class="listitem">
+                              
+                              <p class="para">Ut enim ad minim veniam, quis nostrud exercitation
+                                 ullamcolaboris nisi ut aliquip ex ea commodo
+                                 consequat.
+                                 </p>
+                              </li>
+                           
+                           
+                           <li class="listitem">
+                              
+                              <p class="para">Duis aute irure dolor in reprehenderit in voluptate
+                                 velit esse cillum dolore eu fugiat nulla pariatur.
+                                 </p>
+                              </li>
+                           </ul>
+                        </li>
+                     
+                     
+                     <li class="listitem">
+                        
+                        <p class="para">Excepteur sint occaecat cupidatat non proident, sunt in
+                           culpa qui officia deserunt mollit anim id est laborum.
+                           </p>
+                        </li>
+                     </ul>
+                  </p>
+               </div>
+            
+            
+            <div class="section">
+               <h3>Optional block-level elements tasks</h3>
+               
+               
+               
+               <p class="para">Change your transformation to support different bullets in the
+                  nested unordered list.
+                  </p>
+               
+               
+               <p class="para">Extend this document with your own examples, where unordered
+                  list nesting is higher than 2. Test if your transformation supports
+                  such lists, modify the transformation if needed.
+                  </p>
+               
+               
+               <p class="para">Extend this document with your own example, where the ordered
+                  list contains another ordered list. Test if your transformation
+                  supports such lists, modify the transformation if needed.
+                  </p>
+               
+               
+               <p class="para">In the example above change the numbering level scheme for the
+                  second level list, i.e. 1, 2, 3, 3.1, 3.2, 4 etc
+                  </p>
+               </div>
+            </div>
+         
+         
+         <div class="section">
+            <h2>Inline elements</h2>
+            
+            
+            
+            <p class="para">Inline-level tags are elements like emphasis, hyperlinks, and so
+               forth. They wrap a text within a block-level element. Usually the
+               content of these elements is highlighted with a different font
+               (different font family, font style, font weight etc).
+               </p>
+            
+            
+            <div class="section">
+               <h3>'command' element</h3>
+               
+               
+               
+               <p class="para">Element name: <code class="code">command</code>.</p>
+               
+               
+               <p class="para">Description: the <code class="code">keycap</code> element represents a text
+                  printed on a key on a keyboard.</p>
+               
+               
+               <p class="para">Formatting: the content of this element should be formatted
+                  inline, the key caption is usually rendered with bold font.
+                  </p>
+               
+               
+               <p class="para">Example:</p>
+               
+               
+               <p class="para">Press <b class="keycap">F1</b> to see a help window.</p>
+               </div>
+            
+            
+            <div class="section">
+               <h3>'emphasis' element</h3>
+               
+               
+               
+               <p class="para">Element name: <code class="code">emphasis</code>.</p>
+               
+               
+               <p class="para">Description: the <code class="code">emphasis</code> element provides a method
+                  for indicating that certain text should be stressed in some
+                  way.</p>
+               
+               
+               <p class="para">Formatting: the content of this element should be formatted
+                  inline, emphasized text is usually rendered with italic font.
+                  </p>
+               
+               
+               <p class="para">Example:</p>
+               
+               
+               <p class="para">Here is the <em class="emphasis">thing</em> we would like to
+                  emphasize.
+                  </p>
+               </div>
+            
+            
+            <div class="section">
+               <h3>Optional inline elements task</h3>
+               
+               
+               
+               <p class="para">Create a document with a fragment where <code class="code">emphasis</code>
+                  and <code class="code">keycap</code> elements are combined. Verify if your
+                  transformation supports them, extend it if needed.
+                  </p>
+               </div>
+            </div>
+         
+         
+         <div class="section">
+            <h2>Link elements</h2>
+            
+            
+            
+            <p class="para">Link tags are used to create links which lead to another part of
+               the document or to any external resource, for example a website.
+               </p>
+            
+            
+            <div class="section">
+               <h3>Internal links</h3>
+               
+               
+               
+               <p class="para">Element name: <code class="code">link</code>.
+                  </p>
+               
+               
+               <p class="para">Description: the <code class="code">link</code> element is used to organize
+                  links to other parts of the document. Links are organized using the
+                  <code class="code">id</code> attribute. Each DocBook element can have an
+                  <code class="code">id</code> attribute. To create a link to the particular element
+                  the <code class="code">linkend</code> attribute value of the <code class="code">link</code>
+                  element should contain the same value as the <code class="code">id</code> attribute
+                  of the target element. The text within the <code class="code">link</code> element
+                  is the link text.
+                  </p>
+               
+               
+               <p class="para">Formatting: the links text should be rendered with underlined
+                  font in green color.
+                  </p>
+               
+               
+               <p class="para">Example:</p>
+               
+               
+               <p class="para">Please click <a class="link" href="chapter-introduction">here</a> to
+                  go to the Introduction chapter.
+                  </p>
+               
+               
+               <p class="para">Links without a correct target set, like <a class="link" href="chapter-introduction">this</a>,
+                  should be highlighted but shouldn't take the reader to another place.
+                  </p>
+               </div>
+            
+            
+            <div class="section">
+               <h3>External links</h3>
+               
+               
+               
+               <p class="para">Element name: <code class="code">ulink</code>.</p>
+               
+               
+               <p class="para">Description: the <code class="code">ulink</code> element is used to organize
+                  links to external resources, e.g. websites. The <code class="code">url</code>
+                  attribute of the <code class="code">ulink</code> element should contain an URL of a site.
+                  </p>
+               
+               
+               <p class="para">Formatting: the link text should be rendered with underlined font in green color.</p>
+               
+               
+               <p class="para">Example:</p>
+               
+               
+               <p class="para">Please click <a href="http://www.docbook.org/tdg/en/html/ulink.html">here</a> to
+                  read more about external links in DocBook.
+                  </p>
+               </div>
+            
+            
+            <div class="section">
+               <h3>Optional link elements task</h3>
+               
+               
+               
+               <p class="para">In addition to the general links handling, implement <code class="code">endterm</code> attribute support. The
+                  <code class="code">endterm</code> attribute specifies the location of the text that should be used as a link label.
+                  </p>
+               
+               
+               <p class="para">Example:</p>
+               
+               
+               <p class="para">The following link -
+                  <a class="link" href="chapter-introduction">link example</a>
+                  - should have a label with text "Inline elements".
+                  </p>
+               
+               
+               <p class="para">It would also be nice to add support of rendering other inline elements inside links
+                  (e.g.
+                  <code class="code">keycap</code>, <code class="code">emphasis</code>).
+                  </p>
+               
+               
+               <p class="para">Example:</p>
+               
+               
+               <p class="para">The following link -
+                  <a class="link" href="chapter-introduction"><b class="keycap">bold</b> or <em class="emphasis">italic</em></a>
+                  - should be rendered using corresponding fonts.
+                  </p>
+               </div>
+            </div>
+         </div>
+      
+      
+      <div class="section">
+         <h1>Bonus tasks</h1>
+         
+         
+         
+         <p class="para">If you manage to complete the basic level transformation faster than a week, here
+            you can find
+            a few bonus tasks. The complexity of bonus tasks is increased, so it makes sense to
+            work on them
+            in the provided order.
+            </p>
+         
+         
+         <div class="section">
+            <h2>Implement table of contents</h2>
+            
+            
+            
+            <p class="para">Extend the transformation to make it insert the table of contents (TOC) in the beginning
+               of the document.
+               </p>
+            
+            
+            <ol class="orderedlist">
+               
+               <li class="listitem">
+                  
+                  <p class="para">TOC should have a list of all sections/titles encountered in the document</p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">TOC entries should have appropriate numbering and indentation regarding their position
+                     in the document hierarchy.</p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">TOC items should be links to the appropriate section/title, so
+                     when you click a title in the TOC, you are redirected to the
+                     corresponding section.</p>
+                  </li>
+               </ol>
+            </div>
+         
+         
+         <div class="section">
+            <h2>Implement multiple HTML page output</h2>
+            
+            
+            
+            <p class="para">Extend the transformation to make it generate multiple HTML pages for the input document.</p>
+            
+            
+            <ol class="orderedlist">
+               
+               <li class="listitem">
+                  
+                  <p class="para">Each document section should be presented as a separate HTML page.</p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">There should be an <code class="code">index.html</code> page that contains the TOC.</p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">A click on a TOC entry should open the corresponding section in the same window</p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">If a section has child sections, then the corresponding page should contain mini-TOC
+                     names
+                     "Child Topics". Mini-TOC should have appropriate titles/links of/to child sections.</p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">Each page should have a navigation block at the top with links to previous,
+                     parent and next sections.</p>
+                  </li>
+               </ol>
+            </div>
+         </div>
+      
+      
+      <div class="section">
+         <h1>Tools</h1>
+         
+         
+         
+         <p class="para">It doesn't matter which XSLT processor you use. However, we want to let you know that
+            we are working in the Java environment and use Saxon XSLT processor in most of our
+            projects.</p>
+         
+         
+         <p class="para">It would be nice if you provide a simple Ant build which allows you to run a transformation.</p>
+         </div>
+      
+      
+      <div class="section">
+         <h1>Acceptance criteria</h1>
+         
+         
+         
+         <p class="para">The acceptance procedure is very simple. We run you transformation to transform the
+            source
+            of this document, then review the resulting HTML document.</p>
+         
+         
+         <p class="para">The transformation should be completed without errors. The resulting document should
+            contain
+            all the contents of the original document formatted accordingly.</p>
+         </div>
+      
+      
+      <div class="section">
+         <h1>Resources</h1>
+         
+         
+         
+         <p class="para">This chapter contains links to various useful resources you may need to learn more
+            about XML, XSLT, HTML,
+            XPath, XQuery and others. You can use any information sources you like (not listed
+            here),
+            but we decided to share with you some our favourite ones.</p>
+         
+         
+         <p class="para">All technologies (except DocBook) you are supposed to learn are developed by
+            World Wide Web Consortium (W3C), so you can find a lot of information, including specifications
+            and tutorials at the W3C related sites:</p>
+         
+         
+         <ul class="itemizedlist">
+            
+            <li class="listitem">
+               
+               <p class="para">
+                  <a href="https://www.w3.org/TR/">https://www.w3.org/TR/</a> - main W3C site where all specifications,
+                  a lot of tutorials and links to other resources are available;
+                  </p>
+               </li>
+            
+            
+            <li class="listitem">
+               
+               <p class="para">
+                  <a href="http://www.w3schools.com/">http://www.w3schools.com/</a> - site with a lot of
+                  tutorials, examples and useful stuff.
+                  </p>
+               </li>
+            </ul>
+         
+         
+         <div class="section">
+            <h2>XML</h2>
+            
+            
+            
+            <p class="para">XML (eXtensible Markup Language) is a set of rules for encoding documents electronically.
+               It is defined in the XML 1.0 Specification produced by the W3C and several other related
+               specifications;
+               all are fee-free open standards. You can find a lot of information about XML at:
+               </p>
+            
+            
+            <ul class="itemizedlist">
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="http://en.wikipedia.org/wiki/XML">http://en.wikipedia.org/wiki/XML</a>
+                     - Wikipedia page about XML, contains basic information about XML and a lot of links
+                     to
+                     useful XML-related resources.
+                     </p>
+                  </li>
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="https://www.w3schools.com/xml/default.asp">https://www.w3schools.com/xml/default.asp</a>
+                     - w3schools XML tutorial. Here you can find useful information about XML and XML-related
+                     technologies like XPath, XQuery and get info about XML DOM.
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         
+         
+         <div class="section">
+            <h2>XSLT</h2>
+            
+            
+            
+            <p class="para">XSLT (XSL Transformations) is a declarative, XML-based language used for the transformation
+               of XML
+               documents into other XML (or non-XML) documents.</p>
+            
+            
+            <ul class="itemizedlist">
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="http://en.wikipedia.org/wiki/XSLT">http://en.wikipedia.org/wiki/XSLT</a>
+                     - Wikipedia page about XSLT, provides basic information about XSLT and a lot links
+                     to useful
+                     XSLT-related resources.
+                     </p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="http://www.zvon.org/xxl/XSLTutorial/Output_rus/index.htm">
+                        http://www.zvon.org/xxl/XSLTutorial/Output_rus/index.htm</a> - one of the best XSLT
+                     tutorials/references with a lot of samples (in many languages including Russian).
+                     </p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="http://xmlhack.ru/books/xslt">http://xmlhack.ru/books/xslt</a>
+                     - probably the best book about XSLT 1.0 in Russian (partially available).
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         
+         
+         <div class="section">
+            <h2>HTML</h2>
+            
+            
+            
+            <p class="para">HTML, which stands for Hyper Text Markup Language, is the predominant markup language
+               for web pages.
+               It provides the means to create structured documents by denoting structural semantics
+               for text
+               such as headings, paragraphs, lists etc as well as for links, quotes, and other items.</p>
+            
+            
+            <ul class="itemizedlist">
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="http://en.wikipedia.org/wiki/HTML">http://en.wikipedia.org/wiki/HTML</a>
+                     - Wikipedia page about HTML, provides basic information about HTML and a lot links
+                     to useful
+                     HTML-related resources.
+                     </p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="http://www.w3schools.com/html/default.asp">http://www.w3schools.com/html/default.asp
+                        </a> - excellent tutorials, online editor which allows you to quickly check how things
+                     work.
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         
+         
+         <div class="section">
+            <h2>DocBook</h2>
+            
+            
+            
+            <p class="para">DocBook is a semantic markup language for technical documentation. It was originally
+               intended for
+               writing technical documents related to computer hardware and software but it can be
+               used for any other
+               sort of documentation.
+               </p>
+            
+            
+            <ul class="itemizedlist">
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="http://www.docbook.org/">http://www.docbook.org/</a>
+                     - the official DocBook home page.
+                     </p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="http://en.wikipedia.org/wiki/DocBook">http://en.wikipedia.org/wiki/DocBook</a>
+                     - Wikipedia page about DocBook, provides basic information about DocBook and a lot
+                     links to
+                     useful DocBook-related resources.
+                     </p>
+                  </li>
+               
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="https://tdg.docbook.org/tdg/4.5/docbook.html">
+                        https://tdg.docbook.org/tdg/4.5/docbook.html</a> - DocBook: The Definitive Guide -
+                     very detailed book about DocBook format. Best place to search information about any
+                     element,
+                     DocBook document authoring and so on.
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         
+         <div class="section">
+            <h2>ANT</h2>
+            
+            
+            
+            <p class="para">Apache ANT is a Java based build tool from Apache Software Foundation. </p>
+            
+            
+            <ul class="itemizedlist">
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="https://ant.apache.org/">https://ant.apache.org/</a>
+                     - Apache ANT official home page. Here you can download ANT tool and find manual with
+                     required
+                     information about ANT tasks and how to run build from a command line.
+                     </p>
+                  </li>
+               </ul>
+            
+            <ul class="itemizedlist">
+               
+               <li class="listitem">
+                  
+                  <p class="para">
+                     <a href="https://www.tutorialspoint.com/ant/">https://www.tutorialspoint.com/ant/</a>
+                     - Apache ANT Tutorial for the beginners to help them understand basic functionality
+                     of
+                     Apache ANT tool.
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </body>
+</html>
