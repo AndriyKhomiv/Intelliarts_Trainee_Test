@@ -6,4 +6,4 @@ In this project I use:
 2. Apache Ant
 
 ---
-In order to run the transformation on the command line I need to write "ant"
+Type 'ant' in project root to run the transformation. Result will be put to the 'output' folder
