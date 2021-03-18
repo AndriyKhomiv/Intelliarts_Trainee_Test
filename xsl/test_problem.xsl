@@ -26,7 +26,6 @@
     </xsl:template>
 
     <xsl:template match="section/title">
-        
     </xsl:template>
 
     <xsl:template match="para">
