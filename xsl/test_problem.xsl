@@ -2,7 +2,6 @@
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:strip-space elements="*"/>
-
     <xsl:template match="/">
         <html>
             <body>
@@ -27,7 +26,7 @@
     </xsl:template>
 
     <xsl:template match="section/title">
-        <h1 class="title"><xsl:apply-templates/></h1>
+        
     </xsl:template>
 
     <xsl:template match="para">
