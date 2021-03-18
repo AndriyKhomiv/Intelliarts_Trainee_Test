@@ -67,7 +67,12 @@
     </xsl:template>
 
     <xsl:template match="link">
-        <a class="link" href = "chapter-introduction"><xsl:apply-templates/></a>
+        <xsl:element name="a">
+            <xsl:attribute name="href">
+                <xsl:value-of select="@linkend"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
     </xsl:template>
 
     <xsl:template match="keycap">
