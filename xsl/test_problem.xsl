@@ -46,10 +46,6 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="article/title">
-        <h1 class="title"><xsl:apply-templates/></h1>
-    </xsl:template>
-
     <xsl:template match="section/title">
     </xsl:template>
 
