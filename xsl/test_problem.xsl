@@ -10,6 +10,40 @@
         </html>
     </xsl:template>
 
+<xsl:template match="article">
+ <html><head>
+    <title><xsl:value-of select="title"/></title>
+ </head><body>
+    <h1><xsl:value-of select="title"/></h1>
+    <xsl:apply-templates/>
+ </body></html>
+</xsl:template>
+
+<xsl:template match="section">
+ <h2><xsl:value-of select="title"/></h2>
+ <xsl:apply-templates/>
+</xsl:template>
+
+<xsl:template match="article">
+ <html><head>
+  <title><xsl:value-of select="title"/></title>
+ </head><body>
+  <h1><xsl:value-of select="title"/></h1>
+  <ol><xsl:apply-templates select="section" mode="toc"/></ol>
+  <xsl:apply-templates/>
+ </body></html>
+</xsl:template>
+
+<xsl:template match="section" mode="toc">
+ <li><xsl:value-of select="title"/></li>
+  <xsl:if test="section">
+  <ol><xsl:apply-templates select="section" mode="toc"/></ol>
+ </xsl:if>
+</xsl:template>
+
+<xsl:template match="title">
+</xsl:template>
+
     <xsl:template match="section">
         <xsl:variable name="depth" select="count(ancestor::section)+1"/>
         <div class="section">
