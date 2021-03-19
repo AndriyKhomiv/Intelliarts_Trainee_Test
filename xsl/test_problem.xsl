@@ -19,11 +19,6 @@
  </body></html>
 </xsl:template>
 
-<xsl:template match="section">
- <h2><xsl:value-of select="title"/></h2>
- <xsl:apply-templates/>
-</xsl:template>
-
 <xsl:template match="article">
  <html><head>
   <title><xsl:value-of select="title"/></title>
@@ -53,10 +48,6 @@
             </xsl:call-template>
             <xsl:apply-templates/>
         </div>
-    </xsl:template>
-
-    <xsl:template match="article/title">
-        <h1 class="title"><xsl:apply-templates/></h1>
     </xsl:template>
 
     <xsl:template match="section/title">
