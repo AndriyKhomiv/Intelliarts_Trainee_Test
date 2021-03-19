@@ -15,22 +15,18 @@
     <title><xsl:value-of select="title"/></title>
  </head><body>
     <h1><xsl:value-of select="title"/></h1>
+      <ol><xsl:apply-templates select="section" mode="toc"/></ol>
     <xsl:apply-templates/>
  </body></html>
 </xsl:template>
 
-<xsl:template match="article">
- <html><head>
-  <title><xsl:value-of select="title"/></title>
- </head><body>
-  <h1><xsl:value-of select="title"/></h1>
-  <ol><xsl:apply-templates select="section" mode="toc"/></ol>
-  <xsl:apply-templates/>
- </body></html>
+<xsl:template match="title">
+ <h2><a name="{generate-id()}"><xsl:value-of select="title"/></a></h2>
+ <xsl:apply-templates/>
 </xsl:template>
 
 <xsl:template match="section" mode="toc">
- <li><xsl:value-of select="title"/></li>
+ <li><a href="{generate-id()}"><xsl:value-of select="title"/></a></li>
   <xsl:if test="section">
   <ol><xsl:apply-templates select="section" mode="toc"/></ol>
  </xsl:if>
@@ -48,6 +44,10 @@
             </xsl:call-template>
             <xsl:apply-templates/>
         </div>
+    </xsl:template>
+
+    <xsl:template match="article/title">
+        <h1 class="title"><xsl:apply-templates/></h1>
     </xsl:template>
 
     <xsl:template match="section/title">
