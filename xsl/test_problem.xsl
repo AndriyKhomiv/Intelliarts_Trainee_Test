@@ -14,7 +14,9 @@
                     <xsl:value-of select="title"/>
                 </h1>
                 <hr/>
-                <h3>Table of content</h3>
+                <h3>
+                    Table of content
+                </h3>
                 <ol>
                     <xsl:apply-templates select="section" mode="toc"/>
                 </ol>
@@ -38,11 +40,6 @@
                 <xsl:value-of select="title"/>
             </a>
         </li>
-        <!-- <xsl:if test="section">
-            <ol>
-                <xsl:apply-templates select="section" mode="toc"/>
-            </ol>
-        </xsl:if> -->
     </xsl:template>
 
     <xsl:template match="title">
